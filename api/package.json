@@ -1,11 +1,10 @@
 {
-  "name": "native-app-backend-node",
+  "name": "api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch 'src/**/*.ts' --watch './.env'",
-    "database": "json-server --port 5000 --watch db.json"
+    "start:dev": "nodemon --watch 'src/**/*.ts' --watch './.env'"
   },
   "author": "",
   "license": "ISC",

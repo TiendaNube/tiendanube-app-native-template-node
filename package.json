@@ -1,0 +1,22 @@
+{
+  "name": "app-native-template-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": {
+    "packages": [
+      "api",
+      "frontend"
+    ]
+  },
+  "scripts": {
+    "start:frontend": "yarn workspace frontend start:dev",
+    "start:api": "yarn workspace api start:dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=16.14"
+  },
+  "packageManager": "yarn@3.2.2"
+}
