@@ -9,7 +9,7 @@ passport.use(
   new JWTStrategy(
     {
       jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
-      secretOrKey: process.env.SECRET_KEY,
+      secretOrKey: process.env.SECRET_KEY || "THE_SECRET",
     },
     (jwtPayload, done) => {
       const user = userRepository.findOne(jwtPayload.storeId);

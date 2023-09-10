@@ -27,5 +27,6 @@ export const errorHandlingMiddleware = (
     "Internal Server Error",
     err.message || JSON.stringify(err)
   );
+
   return res.status(payload.statusCode).json(payload);
 };

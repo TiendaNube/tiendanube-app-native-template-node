@@ -1,12 +1,11 @@
 import { Router } from "express";
 import passport from "passport";
 
-// import { AuthenticationController } from "@features/auth";
+import { AuthenticationController } from "@features/auth";
 import { ProductController } from "@features/product";
 
 const routes = Router();
-// routes.get("/auth/install", AuthenticationController.install);
-// routes.post("/auth/login", AuthenticationController.login);
+routes.get("/auth/install", AuthenticationController.install);
 routes.post(
   "/products",
   passport.authenticate("jwt", { session: false }),

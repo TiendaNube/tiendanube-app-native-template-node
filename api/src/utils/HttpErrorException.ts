@@ -4,6 +4,7 @@ export class HttpErrorException {
   message: string;
   description?: string;
   statusCode: StatusCode = StatusCode.INTERNAL_SERVER_ERROR;
+  
   constructor(message: string = HttpErrorException.name, description?: string) {
     this.message = message;
     this.description = description;

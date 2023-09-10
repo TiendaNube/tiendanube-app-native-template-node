@@ -14,7 +14,7 @@ dist-ssr
 *.local
 
 # Local Database
-db.json
+# db.json
 
 # Editor directories and files
 .idea

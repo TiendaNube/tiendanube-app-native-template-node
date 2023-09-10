@@ -38,7 +38,9 @@ class UserRepository {
     );
 
     if (!store) {
-      throw new HttpErrorException(`${user_id} not found`).setStatusCode(404);
+      throw new HttpErrorException(
+        "Read our documentation on how to authenticate your app"
+      ).setStatusCode(404);
     }
 
     return store;
