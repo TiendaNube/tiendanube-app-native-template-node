@@ -16,12 +16,7 @@ class InstallAppService {
       code: code,
     };
 
-    console.log("body", body)
-
     const authenticateResponse = await this.authenticateApp(body);
-
-    console.log("authenticateResponse", authenticateResponse)
-
 
     // This condition will be true when the code has been used or is invalid.
     if (authenticateResponse.error && authenticateResponse.error_description) {
@@ -36,8 +31,6 @@ class InstallAppService {
 
     return authenticateResponse;
   }
-
-
 
   private async authenticateApp(
     body: TiendanubeAuthRequest

@@ -51,7 +51,7 @@ class UserRepository {
   }
 
   private createOrUpdate(data: TiendanubeAuthInterface) {
-    const credentials = database.get("credentials").value();
+    const credentials = database.get("credentials").value() ?? [];
     const hasCredentials = this.findValueFromProperty<TiendanubeAuthInterface>(
       "user_id",
       credentials,
@@ -64,7 +64,7 @@ class UserRepository {
       );
       credentials.splice(index, 1, data);
     } else {
-      credentials.push(data);
+      credentials?.push(data);
     }
     database.set("credentials", credentials).write();
   }
