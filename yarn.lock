@@ -892,10 +892,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tiendanube/nexo@npm:0.3.0-rc.2":
-  version: 0.3.0-rc.2
-  resolution: "@tiendanube/nexo@npm:0.3.0-rc.2"
-  checksum: 9f33ffcf5111f19c1a700e071013af88576473429a01268c6c5143df8bebec0262379ce7446eb63ee18cd1a53a6e87213f9eaafdceb2cc5ce9557ba5304a8f34
+"@tiendanube/nexo@npm:1.0.0-rc.6":
+  version: 1.0.0-rc.6
+  resolution: "@tiendanube/nexo@npm:1.0.0-rc.6"
+  dependencies:
+    react: ^18.2.0
+  checksum: c09278ecd6328f39d5586a261eddd7f8505f175338f693be0be89569fe636650d891e27345a985fd99ee1734165d5f80699d45fb986a8571b8275b6e413843aa
   languageName: node
   linkType: hard
 
@@ -3405,7 +3407,7 @@ __metadata:
     "@nimbus-ds/patterns": ^1.5.1
     "@nimbus-ds/styles": ^9.2.0
     "@nimbus-ds/tokens": ^8.0.1
-    "@tiendanube/nexo": 0.3.0-rc.2
+    "@tiendanube/nexo": 1.0.0-rc.6
     "@types/react": ^18.2.15
     "@types/react-dom": ^18.2.7
     "@typescript-eslint/eslint-plugin": ^6.0.0
