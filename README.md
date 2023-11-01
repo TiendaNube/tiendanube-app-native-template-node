@@ -41,7 +41,7 @@ yarn setup:frontend
 
 ## Running the API
 
-Before proceeding with running the API, read the [README.md](https://github.com/TiendaNube/tiendanube-app-native-template-node/blob/main/README.md) in the api directory to understand more about the project's details and organization.
+Before proceeding with running the API, read the [README.md](https://github.com/TiendaNube/tiendanube-app-native-template-node/blob/main/api/README.md) in the api directory to understand more about the project's details and organization.
 
 ```bash
 yarn start:api
