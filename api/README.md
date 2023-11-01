@@ -51,7 +51,35 @@ SECRET_KEY=THE_SECRET
 
 ## Authentication
 
-- To authenticate the app, you need to modify its redirect URL in the Partners Portal to the API URL and install it in a store. This will ensure that when the authentication process is triggered, the app will be redirected to the designated URL, including the necessary 'code' query string. The 'code' parameter is essential for constructing the body of the POST request to the `https://www.tiendanube.com/apps/authorize/token` authentication API. Upon successful authentication, the API will respond with an object that should be securely stored within the 'credentials' property of the db.json file.
+To authenticate your app exclusively through the API Template, regardless of the Frontend Template, you need to make a modification to your app's redirect URL in the Partner Portal to the API URL and then install it from a store .
+
+1. Access the application details page in the Partner Portal.
+   ![App details](./docs/my-new-app.png "App details")
+
+2. Navigate to the basic data edit card.
+   ![App basic data](./docs/card-basic-data.png "App basic data")
+
+3. You will find the card dedicated to your app URLs.
+4. Change the "Redirect URL after installation" field to the address where your API is running, along with the path `/auth/install`, for example: http://localhost:8000/auth/install.
+
+This will ensure that when the authentication process is triggered, the app will be redirected to the designated URL, including the necessary `code` query string. The `code` parameter is essential for constructing the body of the POST request to the `https://www.tiendanube.com/apps/authorize/token` authentication API. Upon successful authentication, the API will respond with an object that should be securely stored within the `credentials` property of the db.json file.
+
+## Using the API with an Existing Access Token
+
+If you already have a valid access token for our APIs, the previous steps do not need to be performed. Simply replace the data in the "credentials" field of the `db.json` file, following the model below.
+
+```ts
+{
+  "credentials": [
+    {
+      "access_token": "af56c0d9f79f37636927e9f6ec32a31ba135a34e",
+      "token_type": "bearer",
+      "scope": "write_products",
+      "user_id": 2099076
+    }
+  ]
+}
+```
 
 ## Limitations and Considerations
 
