@@ -47,12 +47,6 @@ Before proceeding with running the API, read the [README.md](https://github.com/
 yarn start:api
 ```
 
-and
-
-```bash
-yarn start:db
-```
-
 ## Running the App
 
 Before proceeding with running the app, read the [README.md](https://github.com/TiendaNube/tiendanube-app-native-template-react/blob/main/README.md) in the frontend directory to understand more about the project's details and organization.
