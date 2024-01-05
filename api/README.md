@@ -61,6 +61,11 @@ To authenticate your app exclusively through the API Template, regardless of the
 
 3. You will find the card dedicated to your app URLs.
 4. Change the "Redirect URL after installation" field to the address where your API is running, along with the path `/auth/install`, for example: http://localhost:8000/auth/install.
+5. Complete the installation process of the App in the Store:
+   - Goes to https://www.tiendanube.com/apps/{your_app_id}/authorize?state=csrf-code
+   - User accepts.
+   - The redirection will be made to the URL configured as 'Redirect URL'.
+   - Send the POST request to obtain the `access_token`. For example: [documentation](https://tiendanube.github.io/api-documentation/authentication#example).
 
 This will ensure that when the authentication process is triggered, the app will be redirected to the designated URL, including the necessary `code` query string. The `code` parameter is essential for constructing the body of the POST request to the `https://www.tiendanube.com/apps/authorize/token` authentication API. Upon successful authentication, the API will respond with an object that should be securely stored within the `credentials` property of the db.json file.
 
@@ -86,7 +91,10 @@ If you already have a valid access token for our APIs, the previous steps do not
 - The `db.json` file simply stores the credentials of a store, and when the installation process is repeated, the old object is replaced by the new one.
 - It is necessary to rename the `.env-example` file to `.env` and configure the environment variables with the requested values; otherwise, it will not work.
 - If you don't change the redirect URL in the Partners Portal to the port where the project is running, it won't be possible to authenticate the app or access the Product API.
-- For the Product API to work, the app must have `Write products` permission. [Learn more about permissions](https://dev.nuvemshop.com.br/en/docs/developer-tools/nuvemshop-api#accessing-the-product-api)
+- For the Product API to work, the app must have `Write products` permission. [Learn more about permissions](https://dev.nuvemshop.com.br/en/docs/developer-tools/nuvemshop-api#accessing-the-product-api).
+- It's not possible to access localhost externally with the URL through the browser because it's waiting for authentication between the frontend and backend. Only allow it to be accessible through the Admin. For this reason it is important to 
+  have 'Developer Mode' activated in the test store.
+  More information about this mode: [documentation](https://dev.nuvemshop.com.br/en/docs/applications/native#developer-mode).
 
 ## References and Additional Resources
 
