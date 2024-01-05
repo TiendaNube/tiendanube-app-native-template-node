@@ -92,9 +92,7 @@ If you already have a valid access token for our APIs, the previous steps do not
 - It is necessary to rename the `.env-example` file to `.env` and configure the environment variables with the requested values; otherwise, it will not work.
 - If you don't change the redirect URL in the Partners Portal to the port where the project is running, it won't be possible to authenticate the app or access the Product API.
 - For the Product API to work, the app must have `Write products` permission. [Learn more about permissions](https://dev.nuvemshop.com.br/en/docs/developer-tools/nuvemshop-api#accessing-the-product-api).
-- It's not possible to access localhost externally with the URL through the browser because it's waiting for authentication between the frontend and backend. Only allow it to be accessible through the Admin. For this reason it is important to 
-  have 'Developer Mode' activated in the test store.
-  More information about this mode: [documentation](https://dev.nuvemshop.com.br/en/docs/applications/native#developer-mode).
+- It's not possible to access localhost externally with the URL through the browser because it's waiting for authentication between the frontend and backend. Only allow it to be accessible through the Admin. For this reason it is important to have 'Developer Mode' activated in the test store. More information about this mode: [documentation](https://dev.nuvemshop.com.br/en/docs/applications/native#developer-mode).
 
 ## References and Additional Resources
 
