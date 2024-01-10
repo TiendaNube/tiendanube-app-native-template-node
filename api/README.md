@@ -61,11 +61,10 @@ To authenticate your app exclusively through the API Template, regardless of the
 
 3. You will find the card dedicated to your app URLs.
 4. Change the "Redirect URL after installation" field to the address where your API is running, along with the path `/auth/install`, for example: http://localhost:8000/auth/install.
-5. Complete the installation process of the App in the Store:
+5. The API must be started (with yarn start:api). As indicated in the [documentation](../README.md#running-the-api).
+6. Complete the installation process of the App in the Store:
    - Goes to https://www.tiendanube.com/apps/{your_app_id}/authorize?state=csrf-code
    - User accepts.
-   - The redirection will be made to the URL configured as 'Redirect URL'.
-   - Send the POST request to obtain the `access_token`. For example: [documentation](https://tiendanube.github.io/api-documentation/authentication#example).
 
 This will ensure that when the authentication process is triggered, the app will be redirected to the designated URL, including the necessary `code` query string. The `code` parameter is essential for constructing the body of the POST request to the `https://www.tiendanube.com/apps/authorize/token` authentication API. Upon successful authentication, the API will respond with an object that should be securely stored within the `credentials` property of the db.json file.
 
