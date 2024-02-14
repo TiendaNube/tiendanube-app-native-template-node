@@ -38,8 +38,8 @@ CLIENT_ID=
 # Your Partners Portal account email
 CLIENT_EMAIL=
 
-# In Developer Mode the value is 'THE_SECRET'.
-# In PRO environment the value is your client secret for app.
+# In Developer Mode the value must be THE_SECRET
+# In Production environment the value must be the client_secret of your app
 SECRET_KEY=THE_SECRET
 ```
 > In Production environment, the value of the 'SECRET_KEY' must be the Client Secret (the same value of 'CLIENT_SECRET').
