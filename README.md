@@ -61,6 +61,6 @@ By default the application will run on the port `http://localhost:5173` but this
 yarn start:frontend --port 3000
 ```
 
-## Licença
+## License
 
 This repository is available as open-source under the terms of the MIT License. Be sure to review and comply with the license guidelines when using this code.
