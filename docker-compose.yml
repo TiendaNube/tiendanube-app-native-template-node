@@ -1,0 +1,19 @@
+services:
+  api:
+    image: node:18-alpine
+    command: sh -c "yarn setup:api && yarn start:api"
+    ports:
+      - "127.0.0.1:8000:8000"
+    working_dir: /api
+    volumes:
+      - .:/api
+  frontend:
+    image: node:18-alpine
+    ports:
+      - "127.0.0.1:5173:5173"
+    working_dir: /frontend
+    volumes: 
+      - .:/frontend
+    command: sh -c "yarn setup:frontend && yarn start:frontend --host"
+volumes:
+  app:      

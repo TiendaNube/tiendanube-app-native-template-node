@@ -11,6 +11,7 @@
   },
   "scripts": {
     "setup:frontend": "cd frontend && yarn install",
+    "build:frontend": "yarn workspace frontend build",
     "setup:api": "cd api && yarn install",
     "start:frontend": "yarn workspace frontend start:dev",
     "start:api": "yarn workspace api start:dev"

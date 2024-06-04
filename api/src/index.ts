@@ -5,7 +5,7 @@ import passport from "passport";
 // @ts-ignore
 import dotenv from "dotenv";
 import path from "path";
-
+console.log('Modules import with success')
 dotenv.config({
   path: path.resolve(".env"),
 });
@@ -16,9 +16,10 @@ import {
   errorHandlingMiddleware,
 } from "@middlewares";
 import "./utils/passaport-strategy";
-
+console.log('Routes import with success')
 const port = process.env.PORT || 7200;
 const app = express();
+console.log('Express App Initialized with success')
 
 app.use(
   morgan(":method :url :status :res[content-length] - :response-time ms")
